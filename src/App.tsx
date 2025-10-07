@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -8,8 +9,10 @@ function App() {
     <div id="app-root">
       {/* Header */}
       <header className="site-header">
+      
         <div className="container header-inner">
-          <a className="brand" href="/">CSMJU</a>
+          <a className="brand" href="/">WarehouseOne</a>
+          
 
           {/* ปุ่มเมนูมือถือ */}
           <button
@@ -56,8 +59,9 @@ function App() {
             </div>
             <div className="hero-media">
               <img
-                src="https://oasys.co.th/wp-content/uploads/2023/10/Warehouse-Management-System-Oasys-768x576.png"
+                src="https://www.mycloudfulfillment.com/wp-content/uploads/2025/01/%E0%B8%BABanner-1.png"
                 alt="OASYS WMS"
+                
               />
             </div>
           </div>
@@ -69,7 +73,7 @@ function App() {
           <div className="grid">
             <article className="card-svc">
               <img
-                src="https://oasys.co.th/wp-content/uploads/2023/10/icon-1-295x300.png"
+                src="https://1stcraft.com/wp-content/uploads/2020/05/Depositphotos_69536213_l-2015-1-1024x867.jpg"
                 alt="WMS"
               />
               <h3>ระบบจัดการคลังสินค้า</h3>
@@ -81,7 +85,7 @@ function App() {
 
             <article className="card-svc">
               <img
-                src="https://oasys.co.th/wp-content/uploads/2023/10/Order-Management-System-768x576.png"
+                src="https://zortout.com/wp-content/uploads/2023/03/20230316-124943.jpeg"
                 alt="OMS"
               />
               <h3>ระบบจัดการออเดอร์</h3>
@@ -92,10 +96,7 @@ function App() {
             </article>
 
             <article className="card-svc">
-              <img
-                src="https://oasys.co.th/wp-content/uploads/2024/03/MIND-MAP-oasys-01-1024x496.png"
-                alt="Integration"
-              />
+              <img src="https://dmit.co.th/wp-content/uploads/2023/01/api-%E0%B8%84%E0%B8%B7%E0%B8%AD.jpeg" alt="" />
               <h3>เชื่อมต่อระบบแบบไร้รอยต่อ</h3>
               <p>
                 รองรับ API เชื่อมต่อกับแพลตฟอร์มขายและระบบขนส่งหลากหลาย
@@ -106,7 +107,8 @@ function App() {
   <footer className="site-footer">
   <div className="container footer-inner">
     <div className="footer-brand">
-      <h3>CSMJU</h3>
+      
+      <h3>WarehouseOne</h3>
       <p>
         ระบบบริหารจัดการคลังสินค้าและออเดอร์ออนไลน์  
         ช่วยให้ธุรกิจของคุณทำงานได้อย่างมีประสิทธิภาพ

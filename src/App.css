@@ -2,8 +2,8 @@
 
 :root {
   --bg: #f9fafb;
-  --muted: #9aa4b2;
-  --accent: #0066ff;
+  --muted: #467fcf;
+  --accent: #3a6ebc;
   --card: #0b1220;
   --header-gap-right: 1.5rem; /* space between nav and viewport right edge */
   --nav-gap: 2.2rem; /* spacing between header nav items (increased) */
@@ -41,6 +41,7 @@ main {
   z-index: 100;
   background-color: rgba(0,0,0,0.7);
   border-bottom: 1px solid rgba(255,255,255,0.04);
+  ;
 }
 .header-inner {
   display: flex;
@@ -51,6 +52,7 @@ main {
   background-color: transparent;
   position: relative;
   padding-right: var(--header-gap-right);
+  
 }
 .brand {
   font-weight: 700;
@@ -156,7 +158,7 @@ main {
 }
 .hero-media img {
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   border-radius: 8px;
   box-shadow: 0 8px 30px rgba(2,6,23,0.6);
 }
