@@ -1,0 +1,249 @@
+/* App layout styles for OASYS-like homepage */
+
+:root {
+  --bg: #f9fafb;
+  --muted: #9aa4b2;
+  --accent: #0066ff;
+  --card: #0b1220;
+  --header-gap-right: 1.5rem; /* space between nav and viewport right edge */
+  --nav-gap: 2.2rem; /* spacing between header nav items (increased) */
+}
+
+#app-root {
+  color: #e7eef8;
+  background: linear-gradient(180deg, var(--bg), #06111a 60%);
+  min-height: 100vh;
+}
+
+/* ensure full-height for viewport calculations */
+html, body, #root, #app-root {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* push main content below fixed header so it isn't hidden */
+main {
+  padding-top: var(--header-height, 64px);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height, 64px);
+  z-index: 100;
+  background-color: rgba(0,0,0,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 1rem 0 1rem;
+  background-color: transparent;
+  position: relative;
+  padding-right: var(--header-gap-right);
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  margin-left: 0; /* ❌ ไม่ต้องมีระยะ */
+
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--nav-gap);
+  margin-left: auto;
+  margin-right: 0.25rem;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.nav .cta {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  margin-left: 1rem;
+}
+
+/* Mobile menu button */
+.menu-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 8px;
+  position: relative;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #ffffff;
+  width: 18px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 200ms, top 200ms, opacity 200ms;
+}
+.menu-btn span { top: 50%; }
+.menu-btn span::before { top: 36%; }
+.menu-btn span::after { top: 64%; }
+.menu-btn.open span { transform: translateX(-50%) rotate(45deg); top: 50%; }
+.menu-btn.open span::before { top: 50%; opacity: 0 }
+.menu-btn.open span::after { transform: translateX(-50%) rotate(-45deg); top: 50%; }
+
+.hero {
+  /* make hero fill remaining viewport below the fixed header */
+  min-height: calc(100vh - var(--header-height, 64px));
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+.hero-inner {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero-copy h1 {
+  font-size:  2rem;
+  margin: 0 0 1rem 0;
+}
+.hero-copy p {
+  color: var(--muted);
+  max-width: 52ch;
+}
+.hero-actions {
+  margin-top: 1.25rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+.btn.primary {
+  background: var(--accent);
+  border: none;
+}
+.hero-media img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+.services h2,
+.partners h2,
+.articles h2 {
+  margin-top: 0;
+  color: #000; /* ปรับให้เป็นสีดำสำหรับหัวข้อหลัก */
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card-svc {
+  background: rgba(255,255,255,0.02);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+.card-svc img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+}
+.card-svc h3 {
+  margin: 0.5rem 0;
+  color: #000; /* หัวข้อบริการย่อยเป็นสีดำ */
+}
+.card-svc p {
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.partners img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.articles ul {
+  list-style: none;
+  padding: 0;
+}
+.articles li {
+  padding: 0.35rem 0;
+}
+.articles a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 1.5rem 0 2.5rem 0;
+  margin-top: 2rem;
+}
+.footer-inner {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-links a {
+  display: inline-block;
+  color: var(--muted);
+  margin-left: 0.5rem;
+}
+.copyright {
+  text-align: center;
+  color: var(--muted);
+  padding-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .menu-btn { display: block }
+  .nav { position: absolute; top: calc(var(--header-height,64px)); right: var(--header-gap-right, 1.5rem); background: rgba(2,6,23,0.9); border-radius: 8px; padding: 0.75rem; display: none; flex-direction: column; min-width: 200px; gap: 0.5rem }
+  .nav.open { display: flex }
+  .nav a { margin: 0 }
+  .hero-inner { flex-direction: column-reverse; text-align: center }
+  .footer-inner { flex-direction: column; align-items: center }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 1rem }
+  .brand { font-size: 1rem }
+  .hero-copy h1 { font-size: 1.4rem }
+  .hero-media img { max-width: 320px }
+}
