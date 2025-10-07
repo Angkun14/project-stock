@@ -30,7 +30,7 @@ function App() {
             <a href="#">บทความ</a>
             <a href="#">เกี่ยวกับเรา</a>
             <a href="#">ติดต่อเรา</a>
-            <a className="cta" href="https://oms.oasys.co.th/auth/sign-up">
+            <a className="cta" href="#">
               เข้าสู่ระบบ
             </a>
           </nav>
@@ -103,6 +103,40 @@ function App() {
             </article>
           </div>
         </section>
+  <footer className="site-footer">
+  <div className="container footer-inner">
+    <div className="footer-brand">
+      <h3>CSMJU</h3>
+      <p>
+        ระบบบริหารจัดการคลังสินค้าและออเดอร์ออนไลน์  
+        ช่วยให้ธุรกิจของคุณทำงานได้อย่างมีประสิทธิภาพ
+      </p>
+    </div>
+
+    <div className="footer-links">
+      <h4>เมนูหลัก</h4>
+      <ul>
+        <li><a href="#">หน้าแรก</a></li>
+        <li><a href="#">บริการของเรา</a></li>
+        <li><a href="#">เกี่ยวกับเรา</a></li>
+        <li><a href="#">ติดต่อเรา</a></li>
+      </ul>
+    </div>
+
+    <div className="footer-contact">
+      <h4>ติดต่อเรา</h4>
+      <p>มหาวิทยาลัยแม่โจ้<br />เชียงใหม่ 50290</p>
+      <p>โทร: 053-000000</p>
+      <p>อีเมล: info@csmju.ac.th</p>
+    </div>
+  </div>
+
+  <div className="footer-bottom">
+    <p>© {new Date().getFullYear()} CSMJU. All rights reserved.</p>
+  </div>
+</footer>
+
+
       </main>
     </div>
   )
